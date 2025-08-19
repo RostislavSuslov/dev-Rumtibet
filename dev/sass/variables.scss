@@ -1,8 +1,32 @@
 ///fonts///
-$font-primary: "Open Sans";
-$font-secondary:  "monospace";
-$font-size: 16px;
-
+$font-primary: "NunitoSans";
+$font-secondary: "Next-ART";
+$font-size-base: 16px;
+ 
 ///colors///
-$primary-color: #222;
-$secondary-color: #f00;
+$primary-color: #1A3E3E;
+$bg-color: #F3F5F4;
+$text-accent-color: #F2BE22;
+$bg-accent-color: #ffffff;
+$brand-light-color: #FDFDFD;
+$barnd-dark-color: #18121E;
+
+
+///font///
+$h1-font-size: 50px;
+$h2-font-size: 32px;
+$h3-font-size: 26px;
+$h4-font-size: 24px;
+$h5-font-size: 20px;
+$h6-font-size: 18px;
+
+$h1-line-height: 150%;
+$h2-line-height: 120%;
+$h3-line-height: 120%;
+$h4-line-height: 133%;
+$h5-line-height: 120%;
+$h6-line-height: 111%;
+
+h1 {
+    font-family: $font-secondary;
+}

@@ -1,0 +1,127 @@
+@use "variables";
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%; // iOS
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    font-size: variables.$font-size-base;
+    background: variables.$bg-color;
+    color: variables.$barnd-dark-color;
+    font-family: variables.$font-primary;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    cursor: pointer;
+}
+
+input,
+button,
+textarea,
+select {
+    font-family: variables.$font-primary;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+a {
+    color: variables.$text-accent-color;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+    &:hover {
+        text-decoration: underline;
+        color: variables.$primary-color;
+    }
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+img:not([alt]),
+img[alt=""] {
+    filter: blur(10px);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 800;
+    color: variables.$primary-color;
+    margin-bottom: 1em;
+}
+
+h1 {
+    font-size: variables.$h1-font-size;
+    line-height: variables.$h1-line-height;
+}
+
+h2 {
+    font-size: variables.$h2-font-size;
+    line-height: variables.$h2-line-height;
+}
+
+h3 {
+    font-size: variables.$h3-font-size;
+    line-height: variables.$h3-line-height;
+}
+
+h4 {
+    font-size: variables.$h4-font-size;
+    line-height: variables.$h4-line-height;
+}
+
+h5 {
+    font-size: variables.$h5-font-size;
+    line-height: variables.$h5-line-height;
+}
+
+h6 {
+    font-size: variables.$h6-font-size;
+    line-height: variables.$h6-line-height;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+footer {
+    margin-top: auto;
+}
+
+::selection {
+    background-color: variables.$primary-color;
+    color: variables.$text-accent-color;
+}
