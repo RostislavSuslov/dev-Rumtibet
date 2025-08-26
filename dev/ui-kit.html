@@ -82,17 +82,48 @@
             <form style="padding: 48px; background-color: #ffffff33; backdrop-filter: blur(6px); border-radius: 10px;">
                 <div class="input-box">
                     <input id="date" class="date-input" type="text" placeholder="Дата похода">
-                    <label for="date">
+                    <label for="date" class="label-icon">
                         <svg>
                             <use href="#icon-date"></use>
                         </svg>
                     </label>
+                    <label for="date">укажите дату похода</label>
                 </div>
+                <div class="input-box">
+                    <select name="locations" id="locations-select">
+                        <option value="kyiv">Київ</option>
+                        <option value="lviv">Львів</option>
+                        <option value="odesa">Одеса</option>
+                        <option value="kharkiv">Харків</option>
+                        <option value="dnipro">Дніпро</option>
+                        <option value="kamianets">Кам’янець-Подільський</option>
+                        <option value="chernivtsi">Чернівці</option>
+                        <option value="carpathians">Карпати</option>
+                        <option value="uzhhorod">Ужгород</option>
+                        <option value="kherson">Херсонщина</option>
+                    </select>
+                    <label for="select">выберите из списка</label>
+                </div>
+                <div class="input-box">
+                    <select name="members" id="members-select">
+                        <option value="4">4 человека</option>
+                        <option value="5">5 человек</option>
+                        <option value="6">6 человек</option>
+                        <option value="7">7 человек</option>
+                        <option value="8">8 человек</option>
+                        <option value="9">9 человек</option>
+                        <option value="10">10 человек</option>
+                        <option value="more">больше 10 человек</option>
+                    </select>
+                    <label for="select">минимум 4 человека</label>
+                </div>
+
             </form>
 
         </div>
         <div class="ui-item">
             <h4>selects</h4>
+
         </div>
         <div class="ui-item">
             <h4>Buttons</h4>
