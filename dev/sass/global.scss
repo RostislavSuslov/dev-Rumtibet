@@ -43,7 +43,7 @@ input {
     padding: 16px 16px;
     font-weight: 700;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 1.5;
     color: #fdfdfd;
 
     &::placeholder {
@@ -146,6 +146,46 @@ footer {
     margin-top: auto;
 }
 
+.btn {
+    border-radius: 4px;
+    font-weight: 600;
+    padding: 13px 22px;
+    border: 1px solid transparent;
+    transition: 0.4s;
+    display: inline-block;
+    line-height: 1;
+    &:hover {
+        text-decoration: none;
+    }
+
+    &.btn_primary { 
+        border-color: variables.$primary-color;
+        background-color: variables.$primary-color;
+        color: variables.$brand-light-color;
+
+        &:hover {
+            background-color: variables.$brand-light-color;
+            color: variables.$primary-color;
+        }
+    }
+
+    &.btn_lg {
+        padding: 17px 34px;
+    }
+
+     &.btn_secondary { 
+        border-color:   variables.$brand-light-color;
+        background-color: variables.$brand-light-color;
+        color: variables.$primary-color;
+
+        &:hover {
+            background-color: variables.$primary-color;
+            color: variables.$brand-light-color;
+            border-color: variables.$primary-color;
+        }
+    }
+}
+
 .input-box {
     display: flex;
     flex-direction: column;
@@ -195,20 +235,20 @@ footer {
     }
 
     .nice-select-dropdown {
-       @include variables.background-blur;
+        @include variables.background-blur;
     }
 
     .option:hover,
     .option.focus,
     .option.selected.focus {
-       @include variables.background-blur;
+        @include variables.background-blur;
     }
-    
-    &.open + label {
+
+    &.open+label {
         opacity: 0;
     }
 }
- 
+
 
 ::selection {
     background-color: variables.$primary-color;
