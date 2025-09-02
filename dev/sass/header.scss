@@ -1,1 +1,30 @@
-@use 'variables'as variables;
+@use 'variables' as variables;
+
+.header {
+    background-color: rgba(0, 0, 0, 0.256);
+
+    .container {
+        display: flex;
+        align-items: center;
+    }
+    
+    &__logo {
+        img {
+            height: 72px;
+        }
+    }
+
+    &__mobile-container {
+        display: flex;
+        gap: 38px;
+    }
+
+    &__nav-list {
+        display: flex;
+    }
+
+    &__nav-link {
+        padding: 12px;
+        display: inline-block;
+    }
+}
