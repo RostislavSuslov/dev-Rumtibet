@@ -1,13 +1,15 @@
 @use 'variables' as variables;
 
 .header {
-    background-color: rgba(0, 0, 0, 0.256);
+    padding: 16px 0;
+    margin-bottom: -104px;
+    z-index: 1;
 
     .container {
         display: flex;
         align-items: center;
     }
-    
+
     &__logo {
         img {
             height: 72px;
@@ -17,7 +19,12 @@
     &__mobile-container {
         display: flex;
         gap: 38px;
+
+        &.show {
+            display: flex;
+        }
     }
+
 
     &__nav-list {
         display: flex;
@@ -26,5 +33,36 @@
     &__nav-link {
         padding: 12px;
         display: inline-block;
+        color: variables.$brand-light-color;
+
+        &:focus,
+        &:focus-visible {
+            outline: none;
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: variables.$text-accent-color;
+
+            svg {
+                margin-right: 16px;
+            }
+        }
     }
+}
+
+.hamburger {
+    z-index: 1;
+    margin-left: auto;
+}
+
+
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after,
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background-color: variables.$bg-accent-color;
 }

@@ -1,8 +1,8 @@
 ///fonts///
-$font-primary: "Nunito Sans", sans-serif;  
+$font-primary: "Nunito Sans", sans-serif;
 $font-secondary: "Next-ART";
 $font-size-base: 16px;
- 
+
 ///colors///
 $primary-color: #1A3E3E;
 $bg-color: #F3F5F4;
@@ -30,4 +30,16 @@ $h6-line-height: 1.11;
 @mixin background-blur {
     background-color: #ffffff33;
     backdrop-filter: blur(6px);
+}
+
+@mixin btn-secodary {
+    border-color: $brand-light-color;
+    background-color: $brand-light-color;
+    color: $primary-color;
+
+    &:hover {
+        background-color: $primary-color;
+        color: $brand-light-color;
+        border-color: $primary-color;
+    }
 }

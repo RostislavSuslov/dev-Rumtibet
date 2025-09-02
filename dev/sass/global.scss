@@ -162,11 +162,12 @@ footer {
     transition: 0.4s;
     display: inline-block;
     line-height: 1;
+
     &:hover {
         text-decoration: none;
     }
 
-    &.btn_primary { 
+    &.btn_primary {
         border-color: variables.$primary-color;
         background-color: variables.$primary-color;
         color: variables.$brand-light-color;
@@ -181,16 +182,8 @@ footer {
         padding: 17px 34px;
     }
 
-     &.btn_secondary { 
-        border-color:   variables.$brand-light-color;
-        background-color: variables.$brand-light-color;
-        color: variables.$primary-color;
-
-        &:hover {
-            background-color: variables.$primary-color;
-            color: variables.$brand-light-color;
-            border-color: variables.$primary-color;
-        }
+    &.btn_secondary {
+        @include variables.btn-secodary;
     }
 }
 
@@ -257,6 +250,13 @@ footer {
     }
 }
 
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.d-none {
+    display: none;
+}
 
 ::selection {
     background-color: variables.$primary-color;

@@ -1,6 +1,13 @@
+@use '../variables' as variables;
 @media (min-width: 1025px) {
-    .header-burger {
+    .hamburger {
         display: none;
+    }
+
+    .header__nav-link {
+        svg {
+            display: none;
+        }
     }
 
     .header__mobile-container {
