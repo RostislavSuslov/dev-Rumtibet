@@ -19,6 +19,7 @@
     &__mobile-container {
         display: flex;
         gap: 38px;
+        align-items: center;
 
         &.show {
             display: flex;
@@ -34,6 +35,9 @@
         padding: 12px;
         display: inline-block;
         color: variables.$brand-light-color;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 0.12px;
 
         &:focus,
         &:focus-visible {
