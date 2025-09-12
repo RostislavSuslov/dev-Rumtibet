@@ -100,8 +100,7 @@
             flex-direction: column-reverse;
         }
 
-        &__media,
-        &__content {
+        &__media {
             max-width: 100%;
         }
 
@@ -119,31 +118,7 @@
             }
         }
 
-        &__content {
-            padding-top: 0;
-            display: flex;
-            flex-direction: column;
 
-            .btn {
-                margin: 0 auto;
-            }
-        }
-
-        &__top-title {
-            font-size: 16px;
-            line-height: 1.25;
-            margin-bottom: 8px;
-        }
-
-        &__title {
-            font-size: 24px;
-            margin-bottom: 24px;
-        }
-
-        &__description {
-            font-size: 16px;
-            margin-bottom: 24px;
-        }
 
         .btn {
             padding: 13px 24px;
@@ -159,5 +134,35 @@
         &:last-child {
             margin: 0;
         }
+    }
+
+    .template-content {
+        max-width: 100%;
+    }
+
+    .template-content {
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+
+        .btn {
+            margin: 0 auto;
+        }
+    }
+
+    .template-top-title {
+        font-size: 16px;
+        line-height: 1.25;
+        margin-bottom: 8px;
+    }
+
+    .template-title {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    .template-description {
+        font-size: 16px;
+        margin-bottom: 24px;
     }
 }

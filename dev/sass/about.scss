@@ -32,13 +32,13 @@
     }
 }
 
-.about__content {
+.template-content {
     max-width: 580px;
     padding-top: 63px;
     color: variables.$barnd-dark-color;
 }
 
-.about__top-title {
+.template-top-title {
     color: variables.$text-accent-color;
     font-weight: 400;
     font-size: 24px;
@@ -46,12 +46,12 @@
     margin-bottom: 6px;
 }
 
-.about__title {
+.template-title {
     color: variables.$barnd-dark-color;
     margin-bottom: 38px;
 }
 
-.about__description {
+.template-description {
     font-size: 18px;
     margin-bottom: 40px;
 }
