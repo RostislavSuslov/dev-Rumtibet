@@ -1,0 +1,24 @@
+@use 'variables' as variables;
+
+.modal {
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s, top 0.5s;
+    z-index: 20;
+}
+
+#close-modal {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 10;
+    border: none;
+    background: transparent;
+    transition: transform 0.3s;
+    &:hover {
+        transform: rotate(180deg);
+    }
+}
