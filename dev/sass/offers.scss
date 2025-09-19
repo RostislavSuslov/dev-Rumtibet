@@ -29,6 +29,37 @@
     grid-template-areas: "svg title title"
         "svg description description";
 
+    &.offers-advantages__item_green {
+        &:before {
+            background-color: variables.$icon-overlay-light-green;
+        }
+
+        svg {
+            color: variables.$icon-img-green;
+        }
+    }
+
+    &.offers-advantages__item_blue {
+        &:before {
+            background-color: variables.$icon-overlay-light-blue;
+        }
+
+        svg {
+            color: variables.$icon-img-blue;
+        }
+
+    }
+
+    &.offers-advantages__item_yellow {
+        &:before {
+            background-color: variables.$icon-overlay-light-yellow;
+        }
+
+        svg {
+            color: variables.$icon-img-yellow;
+        }
+    }
+
     &:before {
         content: "";
         position: absolute;
@@ -53,6 +84,7 @@
 .offers-advantages__item-title {
     grid-area: title;
     font-size: 18px;
+    font-weight: 700;
     margin: 0;
     color: #18121E;
 }
@@ -75,7 +107,7 @@
     border-radius: 0 50px 0 50px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    
+
     &:nth-child(2) {
         border-radius: 50px 0 50px 0;
     }

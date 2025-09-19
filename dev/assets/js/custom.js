@@ -13,6 +13,8 @@ new AirDatepicker("#date", {
 	position: "top center",
 });
 
+
+
 if (document.querySelector("select")) {
 	NiceSelect.bind(document.getElementById("locations-select"), {
 		searchable: true,
@@ -26,7 +28,20 @@ if (document.querySelector("select")) {
 		searchtext: "zoek",
 		selectedtext: "geselecteerd",
 	});
+	NiceSelect.bind(document.getElementById("modal-locations-select"), {
+		searchable: false,
+		placeholder: "Участники",
+		searchtext: "zoek",
+		selectedtext: "geselecteerd",
+	});
+	NiceSelect.bind(document.getElementById("modal-members-select"), {
+		searchable: false,
+		placeholder: "Участники",
+		searchtext: "zoek",
+		selectedtext: "geselecteerd",
+	});
 }
+
 
 const forEach = function (t, o, r) {
 	if ("[object Object]" === Object.prototype.toString.call(t))

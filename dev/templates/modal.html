@@ -6,7 +6,7 @@
     </button>
     <form class="first-screen-form modal__first-screen-form">
         <div class="input-box">
-            <select name="locations" id="locations-select" class="hidden-select">
+            <select name="locations" id="modal-locations-select" class="hidden-select">
                 <option value="kyiv">Київ</option>
                 <option value="lviv">Львів</option>
                 <option value="odesa">Одеса</option>
@@ -18,27 +18,7 @@
                 <option value="uzhhorod">Ужгород</option>
                 <option value="kherson">Херсонщина</option>
             </select>
-            <div class="nice-select" tabindex="0">
-                <span class="current">Локация для тура</span>
-                <div class="nice-select-dropdown">
-                    <div class="nice-select-search-box">
-                        <input type="text" class="nice-select-search" placeholder="zoek..." title="search">
-                    </div>
-                    <ul class="list">
-                        <li data-value="kyiv" class="option">Київ</li>
-                        <li data-value="lviv" class="option">Львів</li>
-                        <li data-value="odesa" class="option">Одеса</li>
-                        <li data-value="kharkiv" class="option">Харків</li>
-                        <li data-value="dnipro" class="option">Дніпро</li>
-                        <li data-value="kamianets" class="option">Кам’янець-Подільський</li>
-                        <li data-value="chernivtsi" class="option">Чернівці</li>
-                        <li data-value="carpathians" class="option">Карпати</li>
-                        <li data-value="uzhhorod" class="option">Ужгород</li>
-                        <li data-value="kherson" class="option">Херсонщина</li>
-                    </ul>
-                </div>
-            </div>
-            <label for="locations-select">выберите из списка</label>
+            <label for="modal-locations-select">выберите из списка</label>
         </div>
         <div class="input-box">
             <input id="date" class="date-input" type="text" placeholder="Дата похода">
@@ -50,7 +30,7 @@
             <label for="date">укажите дату похода</label>
         </div>
         <div class="input-box">
-            <select name="members" id="members-select" class="hidden-select">
+            <select name="members" id="modal-members-select" class="hidden-select">
                 <option value="4">4 человека</option>
                 <option value="5">5 человек</option>
                 <option value="6">6 человек</option>
@@ -60,22 +40,7 @@
                 <option value="10">10 человек</option>
                 <option value="more">больше 10 человек</option>
             </select>
-            <div class="nice-select" tabindex="0">
-                <span class="current">Участники</span>
-                <div class="nice-select-dropdown">
-                    <ul class="list">
-                        <li data-value="4" class="option">4 человека</li>
-                        <li data-value="5" class="option">5 человек</li>
-                        <li data-value="6" class="option">6 человек</li>
-                        <li data-value="7" class="option">7 человек</li>
-                        <li data-value="8" class="option">8 человек</li>
-                        <li data-value="9" class="option">9 человек</li>
-                        <li data-value="10" class="option">10 человек</li>
-                        <li data-value="more" class="option">больше 10 человек</li>
-                    </ul>
-                </div>
-            </div>
-            <label for="members-select">минимум 4 человека</label>
+            <label for="modal-members-select">минимум 4 человека</label>
         </div>
         <div class="input-box">
             <button type="submit" class="btn btn_secondary btn_lg">Найти программу</button>
