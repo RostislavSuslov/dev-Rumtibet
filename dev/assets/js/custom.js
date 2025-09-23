@@ -14,7 +14,6 @@ new AirDatepicker("#date", {
 });
 
 
-
 if (document.querySelector("select")) {
 	NiceSelect.bind(document.getElementById("locations-select"), {
 		searchable: true,
@@ -43,6 +42,7 @@ if (document.querySelector("select")) {
 }
 
 
+ 
 const forEach = function (t, o, r) {
 	if ("[object Object]" === Object.prototype.toString.call(t))
 		for (var c in t)
@@ -66,18 +66,5 @@ if (hamburgers.length > 0) {
 	});
 }
 
-const showModalBtn = document.querySelector('#show-program')
-const closeModal = document.querySelector('#close-modal') 
 
-showModalBtn.addEventListener('click', ()=> {
-	body.classList.toggle('overflow-hidden');
-	body.classList.toggle('overlay');
-})
 
-closeModal.addEventListener('click', ()=> {
-	body.classList.toggle('overflow-hidden');
-	body.classList.toggle('overlay');
-})
-
-console.log(closeModal);
- 
