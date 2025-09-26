@@ -42,7 +42,7 @@ if (document.querySelector("select")) {
 }
 
 
- 
+
 const forEach = function (t, o, r) {
 	if ("[object Object]" === Object.prototype.toString.call(t))
 		for (var c in t)
@@ -57,14 +57,29 @@ const body = document.querySelector('body');
 if (hamburgers.length > 0) {
 	forEach(hamburgers, function (hamburger) {
 		hamburger.addEventListener("click", function () {
-				this.classList.toggle("is-active");
-                burgerMenu.classList.toggle("show");
-                body.classList.toggle('overflow-hidden');
-			},
+			this.classList.toggle("is-active");
+			burgerMenu.classList.toggle("show");
+			body.classList.toggle('overflow-hidden');
+		},
 			false
 		);
 	});
 }
 
+const inputTel = document.querySelectorAll('[type="tel"]')
+
+inputTel.forEach(item => {
+	const inputId = item.id
+	
+	IMask(
+		document.getElementById(inputId),
+		{
+			mask: '+{38}(000)000-00-00'
+		}
+	)
+})
 
 
+// 1. custom
+// 2. plagin
+// 3. libary

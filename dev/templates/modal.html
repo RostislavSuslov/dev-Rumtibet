@@ -1,6 +1,6 @@
 <div class="modal" id="show-program">
     <div class="modal-body">
-        <button id="close-modal" class="close-modal" data-close-modal type="button">
+        <button type="button" class="close-modal" data-close-modal>
             <svg class="close-modal__svg">
                 <use href="#icon-close-modal"></use>
             </svg>
@@ -52,13 +52,77 @@
         </form>
     </div>
 </div>
-<div class="modal" id="consultation">
-    <button id="close-modal" class="close-modal" data-close-modal type="button">
-        <svg class="close-modal__svg">
-            <use href="#icon-close-modal"></use>
-        </svg>
-    </button>
-    <h2>consultation</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni assumenda voluptate numquam quasi esse voluptatum
-        quod praesentium consectetur excepturi veritatis.</p>
+<div class="modal modal-template" id="request">
+    <div class="modal-body">
+
+        <button type="button" class="close-modal" data-close-modal>
+            <svg class="close-modal__svg">
+                <use href="#icon-close-modal"></use>
+            </svg>
+        </button>
+        <div class="template-form-wrapper">
+            <h2 class="modal-template__title">Оставить заявку</h2>
+            <h5 class="modal-template__subtitle">Заполните форму ниже и наш менеджер свяжиться с Вами в ближайшее время!</h5>
+
+            <form class="template-form">
+                <div class="input-box">
+                    <label for="user-name">Имя</label>
+                    <input type="text" inputmode="text" name="user-name" id="request-user-name" placeholder="Введите своё имя" >
+                </div>
+                <div class="input-box">
+                    <label for="e-mail">Почта</label>
+                    <input type="email" inputmode="email" name="e-mail" id="request-e-mail"  placeholder="Введите свой почтовый адрес">
+                </div>
+                <div class="input-box">
+                    <label for="telephone">Телефон</label>
+                    <input type="tel" inputmode="tel" name="tel" id="request-telephone" placeholder="+380">
+                </div>
+                <div class="input-box">
+                    <textarea name="letter" id="request-letter" placeholder="Сопроводительное письмо">
+Локация: Киев
+Дата похода: 12.09.2025
+Участники: 6 человек
+                    </textarea>
+                </div>
+                <div class="input-box">
+                    <button type="submit" class="btn btn_secondary btn_lg">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal modal-template" id="consultation">
+    <div class="modal-body">
+
+        <button type="button" class="close-modal" data-close-modal>
+            <svg class="close-modal__svg">
+                <use href="#icon-close-modal"></use>
+            </svg>
+        </button>
+        <div class="template-form-wrapper">
+            <h2 class="modal-template__title">Нужна консультация?</h2>
+            <h5 class="modal-template__subtitle">Наш менеджер свяжиться с Вами в ближайшее время!</h5>
+
+            <form class="template-form">
+                <div class="input-box">
+                    <label for="user-name">Имя</label>
+                    <input type="text" inputmode="text" name="user-name" id="user-name" placeholder="Введите своё имя">
+                </div>
+                <div class="input-box">
+                    <label for="e-mail">Почта</label>
+                    <input type="email" inputmode="email" name="e-mail" id="e-mail"  placeholder="Введите свой почтовый адрес">
+                </div>
+                <div class="input-box">
+                    <label for="telephone">Телефон</label>
+                    <input type="tel" inputmode="tel" name="tel" id="telephone" placeholder="+380">
+                </div>
+                <div class="input-box">
+                    <textarea name="letter" id="letter" placeholder="Сопроводительное письмо"></textarea>
+                </div>
+                <div class="input-box">
+                    <button type="submit" class="btn btn_secondary btn_lg">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
