@@ -1,8 +1,8 @@
 let button = {
-	content: "Select 2021-07-26",
+	content: "2025-30-09",
 	className: "custom-button-classname",
 	onClick: (dp) => {
-		let date = new Date("2021-07-26");
+		let date = new Date("2025-30-09");
 		dp.selectDate(date);
 		dp.setViewDate(date);
 	},
@@ -10,6 +10,21 @@ let button = {
 
 new AirDatepicker("#date", {
 	buttons: [button, "clear"], // Custom button, and pre-installed 'clear' button
+	position: "top center",
+});
+
+let buttonProgram = {
+	content: "2025-30-09",
+	className: "custom-button-classname",
+	onClick: (dp) => {
+		let date = new Date("2025-30-09");
+		dp.selectDate(date);
+		dp.setViewDate(date);
+	},
+};
+
+new AirDatepicker("#date-mobile", {
+	buttons: [buttonProgram, "clear"], // Custom button, and pre-installed 'clear' button
 	position: "top center",
 });
 
@@ -29,7 +44,7 @@ if (document.querySelector("select")) {
 	});
 	NiceSelect.bind(document.getElementById("modal-locations-select"), {
 		searchable: false,
-		placeholder: "Участники",
+		placeholder: "Локация для тура",
 		searchtext: "zoek",
 		selectedtext: "geselecteerd",
 	});

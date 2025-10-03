@@ -47,6 +47,7 @@
             padding-top: 0;
             font-size: 16px;
         }
+
         input,
         textarea {
             color: variables.$barnd-dark-color;
@@ -87,4 +88,59 @@
 
 .bg-pink {
     background-color: pink !important;
+}
+
+.steps {
+    width: 100%;
+}
+
+.steps__nav {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.steps-nav_show {
+    display: grid;
+}
+
+.steps__first-step,
+.steps__second-step {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 24px;
+     
+}
+
+.steps__first-step_hidden {
+    display: none;
+}
+
+.steps__second-step_hidden {
+    display: none;
+}
+
+.massage {
+    border: 1px solid variables.$bg-color;
+    padding: 12px;
+    border-radius: 2px;
+    color: #f00;
+    font-weight: 600;
+    transition: border-color 0.5s, line-height 1s, opacity 1s;
+    width: 100%;
+    line-height: 1.4;
+    opacity: 1;
+}
+
+.massage__hidden {
+    border-color: transparent;
+    border-width: 0;
+    padding: 0;
+    line-height: 0;
+    opacity: 0;
+}
+
+.massage__valid {
+    color: #0f0;
 }

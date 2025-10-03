@@ -81,6 +81,16 @@
         flex-direction: column;
         background-color: variables.$primary-color;
         border: 1px solid #fff;
+        max-width: 550px;
+        width: 100%;
+
+        .btn {
+            cursor: pointer;
+
+            &:hover {
+                border-color: #FDFDFD;
+            }
+        }
     }
 
     .first-screen__title {
