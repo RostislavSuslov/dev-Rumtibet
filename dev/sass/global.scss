@@ -342,3 +342,13 @@ button[disabled] {
     background-color: variables.$primary-color;
     color: variables.$text-accent-color;
 }
+
+
+#message {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    padding: 8px;
+    z-index: 10;
+    margin: 0;
+}

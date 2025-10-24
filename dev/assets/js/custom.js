@@ -1,33 +1,21 @@
 let button = {
-	content: "2025-30-09",
+	content: "2025-30-01",
 	className: "custom-button-classname",
 	onClick: (dp) => {
-		let date = new Date("2025-30-09");
+		let date = new Date();
 		dp.selectDate(date);
 		dp.setViewDate(date);
 	},
 };
 
-new AirDatepicker("#date", {
-	buttons: [button, "clear"], // Custom button, and pre-installed 'clear' button
-	position: "top center",
-});
+const date = document.querySelectorAll('.date-input')
 
-let buttonProgram = {
-	content: "2025-30-09",
-	className: "custom-button-classname",
-	onClick: (dp) => {
-		let date = new Date("2025-30-09");
-		dp.selectDate(date);
-		dp.setViewDate(date);
-	},
-};
-
-new AirDatepicker("#date-mobile", {
-	buttons: [buttonProgram, "clear"], // Custom button, and pre-installed 'clear' button
-	position: "top center",
-});
-
+date.forEach(item => {
+	new AirDatepicker(item, {
+		buttons: [button, "clear"],
+		position: "top center",
+	});
+})
 
 if (document.querySelector("select")) {
 	NiceSelect.bind(document.getElementById("locations-select"), {
@@ -85,7 +73,7 @@ const inputTel = document.querySelectorAll('[type="tel"]')
 
 inputTel.forEach(item => {
 	const inputId = item.id
-	
+
 	IMask(
 		document.getElementById(inputId),
 		{

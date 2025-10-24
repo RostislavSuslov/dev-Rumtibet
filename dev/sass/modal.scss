@@ -110,7 +110,7 @@
     flex-direction: column;
     gap: 24px;
     margin-bottom: 24px;
-     
+
 }
 
 .steps__first-step_hidden {
@@ -121,11 +121,9 @@
     display: none;
 }
 
-.massage {
-    border: 1px solid variables.$bg-color;
-    padding: 12px;
-    border-radius: 2px;
-    color: #f00;
+.message {
+    font-size: 12px;
+    border-radius: 8px;
     font-weight: 600;
     transition: border-color 0.5s, line-height 1s, opacity 1s;
     width: 100%;
@@ -133,7 +131,7 @@
     opacity: 1;
 }
 
-.massage__hidden {
+.message__hidden {
     border-color: transparent;
     border-width: 0;
     padding: 0;
@@ -141,6 +139,44 @@
     opacity: 0;
 }
 
-.massage__valid {
-    color: #0f0;
+
+
+.error-field {
+
+    [data-required-field],
+    .nice-select {
+        transition: box-shadow 0.2s, background-color 1.5s, ;
+        background-color: #ff000030;
+        box-shadow: 0px 0px 8px 1px red;
+
+    }
+
+    .message {
+        color: #f00;
+    }
+}
+
+.valid-field {
+
+    [data-required-field],
+    .nice-select {
+        transition: box-shadow 0.2s, background-color 1.5s, ;
+        background-color: #1eff0030;
+        box-shadow: 0px 0px 8px 1px #37ff00;
+    }
+
+    .message {
+        color: #0f0;
+    }
+}
+
+
+[data-required-field] ~ label:not(.label-icon) {
+    position: relative;
+    &::before {
+        content: "*";
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
 }
