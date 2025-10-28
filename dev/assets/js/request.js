@@ -60,8 +60,6 @@ layoutStepTwo.classList.add('steps__second-step_hidden')
 const formConfig = {
     errorMessage: "Усі поля обов'язкові. Будь ласка, заповніть поля.",
     validMessage: "Обов'язкове поле заповнене ✓",
-    warnnigMessage: "warnnigMessage!",
-    empty_fields: true,
 }
 
 const createMessageText = (field, text) => {
@@ -87,34 +85,23 @@ const createErrorMessage = (field) => {
     createMessageText(field, formConfig.errorMessage)
 }
 
-/*<refactor: 1>*/
-requiredFieldStepFirst.forEach(field => {
-    field.addEventListener('change', () => {
-        field.value === "" ? createErrorMessage(field) : createSuccessMessage(field)
-    })
-})
-
-requiredFieldStepSecond.forEach(field => {
-    field.addEventListener('input', () => {
-        field.value === "" ? createErrorMessage(field) : createSuccessMessage(field)
-    })
-})
-/*</refactor: 1>*/
-
-
-/*<refactor: 2>*/
-const createMessage = () => {
-    requiredFieldStepFirst.forEach(field => {
-        field.value === "" ? createErrorMessage(field) : createSuccessMessage(field)
+const requiredField = (arr, event)=>{
+    arr.forEach(field => {
+        field.addEventListener(event, () => {
+            field.value === "" ? createErrorMessage(field) : createSuccessMessage(field)
+        })
     })
 }
 
-const createMessageStepSecond = () => {
-    requiredFieldStepSecond.forEach(field => {
+requiredField(requiredFieldStepFirst, 'change')
+requiredField(requiredFieldStepSecond, 'input')
+
+
+const createMessage = (arr) => {
+    arr.forEach(field => {
         field.value === "" ? createErrorMessage(field) : createSuccessMessage(field)
     })
 }
-/*</refactor: 2>*/
 
 const showNav = () => {
     stepsNav.classList.add('steps-nav_show')
@@ -128,7 +115,7 @@ const showStepFirst = () => {
 
 const showStepSecond = () => {
     if (modalLocationsSelect.value === "" || dateMobile.value === "" || modalMembersSelect.value === "") {
-        createMessage()
+        createMessage(requiredFieldStepFirst)
     } else {
         submitButton.setAttribute('data-step', '2')
         layoutStepFirst.classList.add('steps__first-step_hidden')
@@ -141,34 +128,22 @@ stepsNavButtonFirst.addEventListener('click', showStepFirst)
 stepsNavButtonSecond.addEventListener('click', showStepSecond)
 
 const checkedValue2 = () => {
-
-
     if (programUserName.value === "" || programUserEmail.value === "" || programUserTelephone.value === "") {
-        createMessageStepSecond()
+        createMessage(requiredFieldStepSecond)
     } else if (programUserName.value !== "" && programUserEmail.value !== "" && programUserTelephone.value !== "" && modalLocationsSelect.value !== "" && dateMobile.value !== "" && modalMembersSelect.value !== "") {
         console.log("submit form");
         submitButton.setAttribute('type', 'submit')
     }
 }
 
-// array.forEach(field => {
-//     field.value !== "" ? console.log("submit form") : null
-// })
-
 const stepSecond = () => {
-    console.log('step 2');
     submitButton.setAttribute('data-step', '2')
-
     const submitButtonStepSecond = document.querySelector("[data-step='2']")
     submitButtonStepSecond.addEventListener('click', checkedValue2);
 
     showNav();
     showStepSecond()
-
 }
-
-
-
 
 const checkedValue = () => {
     if (modalLocationsSelect.value === "" || dateMobile.value === "" || modalMembersSelect.value === "") {
@@ -178,28 +153,16 @@ const checkedValue = () => {
     }
 }
 
-// const showSecondStep = () => {
-//     if (modalLocationSelect.value === "" || mobileCalendar.value === "" || modalMemberSelect.value === "") {
-//         errorMessageStepFirst()
-//     } else {
-//         layoutStepFirst.classList.add('steps__second-step_hidden')
-//         layoutStepSecond.classList.remove('steps__second-step_hidden')
-//     }
-// }
+// array.forEach(field => {
+//     field.value !== "" ? console.log("submit form") : null
+// })
 
 submitButtonStepFirst.addEventListener('click', checkedValue);
 
 
 /*
-Перевірка - заповнили поля чи ні:
-
-- якщо заповнені, інший крок
-  -
-  -
-  -
-
-- якщо не заповнені, повідомити що потрібно заповнити
-  -
-  -
-  -
+1. Необмежану кількість кроків
+2. Необмежану кількість обов'язкових полів
+3. Необмежану кількість категорій повідомлень
+3. додати валідацію на номер телефону, емаіл, дату і т.д.
 */

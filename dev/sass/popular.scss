@@ -1,0 +1,145 @@
+@use 'variables' as variables;
+
+.popular {
+    @include variables.section-padding;
+    background-color: variables.$bg-accent-color;
+}
+
+.template-top-title_centered,
+.template-title_centered {
+    text-align: center;
+}
+
+
+
+.swiper-slide_popular {
+    min-height: 500px;
+    border-radius: 32px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.popular-img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.popular-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: end;
+    width: 65px;
+    background: #fdfdfd66;
+    border-radius: 4px 0 0 4px;
+    padding: 4px 8px;
+    transition: 0.4s opacity;
+    position: absolute;
+    top: 50px;
+    right: 0;
+}
+
+.popular-rating__star-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.popular-rating__value {
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.popular-rating__star {
+    color: variables.$text-accent-color;
+}
+
+.popular-info {
+    margin-top: auto;
+    background: #ffffff33;
+    backdrop-filter: blur(6px);
+    color: variables.$brand-light-color;
+    padding: 20px 32px 23px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .btn {
+        display: none;
+    }
+}
+
+.popular-info__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: variables.$brand-light-color;
+    padding-right: 86px;
+}
+
+.popular-info__subtitle {
+    font-size: 14px;
+    padding-right: 86px;
+}
+
+.popular-info__description {
+    height: 0;
+    opacity: 0;
+    transition: 0.5s opacity;
+}
+
+.popular-info__price {
+    padding: 8px 16px;
+    background: #ffffff4d;
+    border-radius: 4px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 20px;
+    color: #FDFDFD;
+    position: absolute;
+    right: 0;
+    top: 25px;
+}
+
+
+.popular-info {
+    height: 90px;
+    transition: 0.3s height;
+
+    .btn {
+        margin-top: auto;
+    }
+}
+
+.swiper-slide_popular {
+    &:hover {
+        .popular-info {
+            height: 500px;
+        }
+
+        .popular-rating {
+            opacity: 0;
+
+        }
+
+        .popular-info__subtitle {
+            margin-bottom: 38px;
+        }
+
+        .popular-info__description {
+            opacity: 1;
+            height: auto;
+        }
+
+        .btn {
+            display: block;
+        }
+    }
+}
