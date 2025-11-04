@@ -9,4 +9,49 @@
     .about__container {
         gap: 72px;
     }
+
+    .popular-info__title {
+        font-size: 22px;
+    }
+
+    .popular-info__price {
+        font-size: 18px;
+
+    }
+
+    .popular-info__description {
+        line-height: 1.3;
+    }
+
+    .swiper-slide_popular {
+        --slide-height: 430px;
+
+        &:hover {
+            .popular-info__subtitle {
+                margin-bottom: 22px;
+            }
+
+            .popular-info__description {
+                max-height: 190px;
+                overflow-y: auto;
+                margin: auto;
+            }
+        }
+    }
+
+    .blog-item {
+        flex-direction: column;
+
+    }
+
+    .blog-item__img {
+        max-height: 230px;
+        width: 100%;
+    }
+
+    .blog-item__content-box {
+        flex: 1 0 210px;
+    }
+
+
 }

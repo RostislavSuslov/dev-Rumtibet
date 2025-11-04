@@ -212,6 +212,7 @@ footer {
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s;
+
     span {
         width: 50px;
         height: 50px;
@@ -305,7 +306,7 @@ button[disabled] {
     }
 
     .nice-select-dropdown {
-        background-color:  variables.$primary-color;
+        background-color: variables.$primary-color;
     }
 
     .option:hover,
@@ -349,6 +350,28 @@ button[disabled] {
     top: 0;
     text-align: center;
     padding: 8px;
-    z-index: 10;
+    z-index: 20;
     margin: 0;
+}
+
+.swiper-counter {
+    --swiper-navigation-size: 24px;
+    text-align: center;
+    padding: 36px 0;
+    font-size: var(--swiper-navigation-size);
+    font-weight: 600;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: 0;
+    color: variables.$primary-color;
 }

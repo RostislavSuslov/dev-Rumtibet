@@ -83,16 +83,42 @@ inputTel.forEach(item => {
 })
 
 
-const swiper = new Swiper('.swiper-popular', {
+const swiperPopular = new Swiper('.swiper-popular', {
 	direction: 'horizontal',
 	loop: true,
-	slidesPerView: 3,
+	slidesPerView: 1,
 	spaceBetween: 20,
-	speed: 2500,
-	// autoplay: {
-	// 	delay: 1000,
-	// },
+	speed: 3000,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	autoplay: {
+		delay: 0,
+		disableOnInteraction: true,
+	},
+
+	breakpoints: {
+		576: {
+			slidesPerView: 2,
+		},
+		1025: {
+			slidesPerView: 3,
+		},
+	},
+
 });
+
+// swiperPopular.init()
+
+swiperPopular.on("slideChange afterInit slidesLengthChange", function () {
+	let currentSlide = this.activeIndex + 1;
+	document.querySelector('.swiper-counter__current').innerHTML = `${currentSlide}&nbsp/`;
+	document.querySelector('.swiper-counter__total').innerHTML = `&nbsp${this.slides.length}`;
+});
+
+
+
 
 // 1. custom
 // 2. plagin
