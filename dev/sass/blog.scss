@@ -1,1 +1,52 @@
-@use 'variables'as variables;
+@use 'variables' as variables;
+
+.blog {
+    padding: 80px 100px;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 20px;
+}
+
+.blog-item {
+    border-radius: 10px;
+    box-shadow: 0 0 12px 0 #18121e1f;
+    background-color: #ffffff;
+    padding: 16px;
+    display: flex;
+    gap: 24px;
+
+    &__img-box {
+        flex: 0 1 230px;
+    }
+
+    &__img {
+        border-radius: 6px;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__content-box {
+        flex: 1 0 294px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    &__description {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+
+    &-row {
+        display: flex;
+        justify-content: space-between;
+        margin-top: auto;
+    }
+}
