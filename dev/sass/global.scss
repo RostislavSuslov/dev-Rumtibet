@@ -365,13 +365,12 @@ button[disabled] {
     justify-content: center;
     max-width: 200px;
     margin: 0 auto;
+    .swiper-button-next,
+    .swiper-button-prev {
+        top: 50%;
+        transform: translate(0, -50%);
+        margin: 0;
+        color: variables.$primary-color;
+    }
 }
 
-
-.swiper-button-next,
-.swiper-button-prev {
-    top: 50%;
-    transform: translate(0, -50%);
-    margin: 0;
-    color: variables.$primary-color;
-}

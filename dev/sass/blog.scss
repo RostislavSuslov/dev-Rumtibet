@@ -1,14 +1,11 @@
 @use 'variables' as variables;
 
 .blog {
-    padding: 80px 100px;
+    // padding: 80px 100px;
+    padding: 80px 0;
 }
 
-.blog-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px 20px;
-}
+
 
 .blog-item {
     border-radius: 10px;
@@ -25,6 +22,7 @@
     &__img {
         border-radius: 6px;
         height: 100%;
+        max-height: 280px;
         object-fit: cover;
     }
 

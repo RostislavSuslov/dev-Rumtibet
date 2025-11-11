@@ -16,35 +16,6 @@
 
 }
 
-.popular-info__description {
-
-    // scrollbar-color: #4d7fff #ddd;
-
-    // &::-webkit-scrollbar {
-    //     width: 4px;
-    //     height: 4px;
-    // }
-
-    // &::-webkit-scrollbar-track {
-    //     background: #F3F5F4;
-    //     border-radius: 0;
-    // }
-
-    // &::-webkit-scrollbar-thumb {
-    //     background: #1A3E3E;
-    //     border-radius: 0;
-    // }
-
-    // &::-webkit-scrollbar-thumb:hover {
-    //     background: #1A3E3E;
-    // }
-
-    // // &::-webkit-scrollbar-button {
-    // //   display: none;
-    // // }
-    // scrollbar-width: thin;
-}
-
 .swiper-slide_popular {
     --slide-height: 500px;
     min-height: var(--slide-height);

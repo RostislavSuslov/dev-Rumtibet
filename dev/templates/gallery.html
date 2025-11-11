@@ -1,5 +1,57 @@
 <section class="gallery">
     <div class="container">
-        <h2>gallery</h2>
+        <h3 class="template-top-title template-top-title_centered">фото-отчет</h3>
+        <h2 class="template-title template-title_centered">Делимся впечатлениями</h2>
+        <div class="swiper swiper-gallery">
+            <div class="gallery-grid swiper-wrapper">
+                <a href="./assets/img/gallery-1-xl.png" class="swiper-slide gallery-grid__item gallery-grid__item_1"
+                    title="alt for gallery-1-xl.png">
+                    <img src="./assets/img/gallery-1.png" class="gallery__img" alt="gallery-1">
+                </a>
+                <a href="./assets/img/gallery-2-xl.png" class="swiper-slide gallery-grid__item gallery-grid__item_2"
+                    title="alt for gallery-2-xl.png">
+                    <img src="./assets/img/gallery-2.png" class="gallery__img" alt="gallery-2">
+                </a>
+                <a href="./assets/img/gallery-3-xl.png" class="swiper-slide gallery-grid__item gallery-grid__item_3"
+                    title="alt for gallery-3-xl.png">
+                    <img src="./assets/img/gallery-3.png" class="gallery__img" alt="gallery-3">
+                </a>
+                <a href="./assets/img/gallery-4-xl.png" class="swiper-slide gallery-grid__item gallery-grid__item_4"
+                    title="alt for gallery-4-xl.png">
+                    <img src="./assets/img/gallery-4.png" class="gallery__img" alt="gallery-4">
+                </a>
+                <a href="./assets/img/gallery-5-xl.png" class="swiper-slide gallery-grid__item gallery-grid__item_5"
+                    title="alt for gallery-5-xl.png">
+                    <img src="./assets/img/gallery-5.png" class="gallery__img" alt="gallery-5">
+                </a>
+                <a href="./assets/img/gallery-6-xl.png" class="swiper-slide gallery-grid__item gallery-grid__item_6"
+                    title="alt for gallery-6-xl.png">
+                    <img src="./assets/img/gallery-6.png" class="gallery__img" alt="gallery-6">
+                </a>
+            </div>
+            <div class="swiper-counter">
+                <div class="swiper-button-prev swiper-gallery-button-prev"></div>
+                <div class="swiper-gallery-counter__current"></div>
+                <div class="swiper-gallery-counter__total"></div>
+                <div class="swiper-button-next swiper-gallery-button-next"></div>
+            </div>
+        </div>
+
+
+
+        <div class="gallery-overlay" id="galleryOverlay">
+            <div class="gallery-inner">
+                <button class="gallery-btn gallery-prev" id="galleryPrev">&#10094;</button>
+                <img src="" alt="" class="gallery-img" id="galleryImage">
+                <button class="gallery-btn gallery-next" id="galleryNext">&#10095;</button>
+                <button class="gallery-close" id="galleryClose">
+                    <svg>
+                        <use href="#icon-close-modal"></use>
+                    </svg>
+                </button>
+                <div class="gallery-counter" id="galleryCounter">0 / 0</div>
+            </div>
+        </div>
     </div>
+
 </section>
