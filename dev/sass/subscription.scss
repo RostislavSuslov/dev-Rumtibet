@@ -1,1 +1,69 @@
-@use 'variables'as variables;
+@use 'variables' as variables;
+
+.subscription {
+    @include variables.container;
+    margin: 100px auto -80px;
+    background-color: #FDFDFD;
+    height: 190px;
+    box-shadow: 0 0 15px 0 #18121e1f;
+    border-radius: 6px;
+    padding: 40px 100px;
+    z-index: 10;
+    position: relative;
+    display: flex;
+    gap: 36px;
+    justify-content: space-between;
+
+    &__title-box {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    &-form {
+        display: flex;
+        align-items: flex-end;
+        gap: 16px;
+        margin-bottom: 8px;
+        .subscription-form__label {
+            font-size: 16px;
+            line-height: 1.25;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        &__input {
+            max-width: 100%;
+            background-color: variables.$bg-color;
+            border: none;
+            color: variables.$barnd-dark-color;
+            font-size: 14px;
+            font-weight: 300;
+            max-height: 44px;
+            &::placeholder {
+                color: #18121e88;
+            }
+        }
+    }
+
+
+    &__form-box {
+        width: 100%;
+        max-width: 536px;
+    }
+
+    &-form {
+        label {
+            color: variables.$barnd-dark-color
+        }
+
+        .btn {
+            white-space: nowrap;
+        }
+    }
+
+    &-info {
+        font-size: 14px;
+        line-height: 1.8;
+        font-weight: 600;
+    }
+}

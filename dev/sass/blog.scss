@@ -1,8 +1,7 @@
 @use 'variables' as variables;
 
 .blog {
-    // padding: 80px 100px;
-    padding: 80px 0;
+   @include variables.section-padding;
 }
 
 
