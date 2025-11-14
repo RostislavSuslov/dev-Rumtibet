@@ -1,10 +1,12 @@
 @use 'variables' as variables;
 
 .subscription {
-    @include variables.container;
-    margin: 100px auto -80px;
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: var(--separate);
     background-color: #FDFDFD;
-    height: 190px;
     box-shadow: 0 0 15px 0 #18121e1f;
     border-radius: 6px;
     padding: 40px 100px;
@@ -19,16 +21,27 @@
         max-width: 340px;
     }
 
+    .template-top-title {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .template-title {
+        margin-bottom: 0;
+    }
+
     &-form {
         display: flex;
         align-items: flex-end;
         gap: 16px;
         margin-bottom: 8px;
+
         .subscription-form__label {
             font-size: 16px;
             line-height: 1.25;
             margin-bottom: 8px;
             font-weight: 600;
+            padding-left: 0;
         }
 
         &__input {
@@ -39,8 +52,10 @@
             font-size: 14px;
             font-weight: 300;
             max-height: 44px;
+
             &::placeholder {
                 color: #18121e88;
+                font-size: 14px;
             }
         }
     }
@@ -58,12 +73,24 @@
 
         .btn {
             white-space: nowrap;
+                width: 100%;
+    max-width: 240px;
         }
     }
 
     &-info {
         font-size: 14px;
-        line-height: 1.8;
+        line-height: 1.28;
         font-weight: 600;
+        margin: 0;
+
+        a {
+            color: variables.$barnd-dark-color;
+            text-decoration: underline;
+
+            &:hover {
+                color: variables.$text-accent-color;
+            }
+        }
     }
 }

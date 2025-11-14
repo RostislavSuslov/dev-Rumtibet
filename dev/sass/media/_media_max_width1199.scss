@@ -52,4 +52,9 @@
     .blog-item__content-box {
         flex: 1 0 210px;
     }
+
+    .subscription {
+        width: calc(100% - 96px);
+        padding: 40px 48px;
+    }
 }
