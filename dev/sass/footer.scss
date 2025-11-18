@@ -3,7 +3,7 @@
 .footer {
     background-color: variables.$primary-color;
     color: variables.$brand-light-color;
-    
+
     &__container {
         display: flex;
         padding-top: calc(var(--separate) * -1 * 2);
@@ -64,5 +64,45 @@
         --size: 32px;
         width: var(--size);
         height: var(--size);
+    }
+
+    &-navigation {
+        display: flex;
+        max-width: 680px;
+        margin-left: auto;
+        justify-content: space-between;
+    }
+
+    &-nav-item {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    &-nav__title {
+        color: variables.$bg-color;
+    }
+
+    &-nav__item {
+        margin-bottom: 16px;
+    }
+
+    &-nav__link {
+        color: variables.$brand-light-color;
+        font-size: 14px;
+        line-height: 1.28;
+        position: relative;
+        display: flex;
+
+        &:hover {
+            color: variables.$text-accent-color;
+        }
+    }
+
+    &-nav__svg {
+        width: 10px;
+        height: 14px;
+        position: absolute;
+        left: -17px;
+        top: -1px;
     }
 }
