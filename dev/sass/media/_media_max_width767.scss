@@ -1,6 +1,10 @@
 @use '../variables' as variables;
 
 @media screen and (max-width: 767px) {
+    :root {
+        --separate: 50px;
+    }
+
     .popular-info__title {
         font-size: 18px;
     }
@@ -25,5 +29,37 @@
         --swiper-navigation-size: 20px;
         padding: var(--swiper-navigation-size) 0;
         max-width: 175px;
+    }
+
+    .footer__container {
+        padding-top: var(--separate);
+        padding-bottom: 80px;
+        flex-direction: column;
+        gap: var(--separate);
+    }
+
+    .footer-navigation {
+        flex-direction: column;
+
+    }
+
+    .footer__address-title {
+        font-size: 20px;
+    }
+
+    .footer__address-description {
+        margin-bottom: 30px;
+    }
+
+    .footer-address__row {
+        margin-bottom: 30px;
+    }
+
+    .footer-navigation {
+        gap: 50px;
+    }
+
+    .footer__coppyright-container {
+        justify-content: center;
     }
 }

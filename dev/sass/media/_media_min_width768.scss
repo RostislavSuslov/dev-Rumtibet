@@ -25,4 +25,18 @@
             display: none;
         }
     }
+
+    .footer {
+        &__address {
+            flex: 0 1 430px;
+        }
+
+        &-navigation {
+            flex: 0 1 680px;
+        }
+        &-navigation {
+            margin-left: auto;
+        }
+    }
+
 }

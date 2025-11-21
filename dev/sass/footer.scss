@@ -8,32 +8,34 @@
         display: flex;
         padding-top: calc(var(--separate) * -1 * 2);
         padding-bottom: calc(var(--separate) * -1);
+        gap: 24px;
     }
 
     &__address {
-        flex: 0 1 430px;
         color: variables.$bg-accent-color;
     }
 
     &-navigation {
-        flex: 0 1 680px;
+        display: flex;
+        gap: 24px;
+        justify-content: space-between;
     }
 
     &__address-title {
         color: variables.$bg-accent-color;
-        margin-bottom: 17px;
     }
 
     &__address-description {
         font-size: 14px;
-        line-height: 1.4;
+        line-height: 1.429;
         margin-bottom: calc(var(--separate) * -1);
     }
 
     &-address__row {
         display: flex;
-        gap: 24px;
+        flex-wrap: wrap;
         margin-bottom: 32px;
+        gap: 12px 24px;
     }
 
     &-address__link {
@@ -66,11 +68,10 @@
         height: var(--size);
     }
 
-    &-navigation {
-        display: flex;
-        max-width: 680px;
-        margin-left: auto;
-        justify-content: space-between;
+
+
+    &-nav__list {
+        padding-left: 20px;
     }
 
     &-nav-item {
@@ -84,6 +85,10 @@
 
     &-nav__item {
         margin-bottom: 16px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     &-nav__link {
@@ -92,6 +97,7 @@
         line-height: 1.28;
         position: relative;
         display: flex;
+        font-weight: 400;
 
         &:hover {
             color: variables.$text-accent-color;
@@ -104,5 +110,31 @@
         position: absolute;
         left: -17px;
         top: -1px;
+    }
+
+    &__coppyright {
+        background: variables.$barnd-dark-color;
+        padding: 24px 0;
+    }
+
+    &__coppyright-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 8px 24px;
+        flex-wrap: wrap;
+    }
+
+    &__coppyright-link {
+        color: variables.$brand-light-color;
+        text-decoration: underline;
+        font-size: 14px;
+
+        &_develop {
+            text-decoration: none;
+        }
+
+        &:hover {
+            color: variables.$text-accent-color;
+        }
     }
 }

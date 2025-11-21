@@ -1,6 +1,10 @@
 @use '../variables' as variables;
 
 @media screen and (max-width: 1024px) {
+    :root {
+        --separate: 50px;
+    }
+
     .header {
         padding-top: 12px;
         padding-bottom: 20px;
@@ -62,7 +66,8 @@
     }
 
     .container {
-        padding: 0 16px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
     .first-screen {
@@ -200,7 +205,7 @@
         padding: 24px;
         gap: 0;
         max-width: 580px;
-        margin-bottom: 50px;
+
 
         .template-title {
             margin-bottom: 18px;
@@ -211,5 +216,14 @@
             align-items: flex-start;
             margin-bottom: 24px;
         }
+    }
+
+    .footer__container {
+        padding-top: var(--separate);
+        padding-bottom: var(--separate);
+    }
+
+    .footer__address-description {
+        margin-bottom: var(--separate);
     }
 }
