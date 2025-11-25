@@ -9,7 +9,7 @@
             <div class="steps">
                 <div class="steps__first-step">
                     <div class="input-box">
-                        <select name="locations" id="modal-locations-select" class="hidden-select" data-required-field >
+                        <select name="locations" id="modal-locations-select" class="hidden-select" data-required-field>
                             <option value="" disabled selected>Выберите город</option>
                             <option value="kyiv">Київ</option>
                             <option value="lviv">Львів</option>
@@ -25,7 +25,8 @@
                         <label for="modal-locations-select">выберите из списка</label>
                     </div>
                     <div class="input-box">
-                        <input id="date-mobile" class="date-input" type="text" placeholder="Дата похода" data-required-field>
+                        <input id="date-mobile" class="date-input" type="text" placeholder="Дата похода"
+                            data-required-field>
                         <label for="date-mobile" class="label-icon">
                             <svg>
                                 <use href="#icon-date"></use>
@@ -50,15 +51,18 @@
                 </div>
                 <div class="steps__second-step">
                     <div class="input-box">
-                        <input type="text" inputmode="text" name="program-user-name" id="program-user-name" placeholder="Введите своё имя" data-required-field>
+                        <input type="text" inputmode="text" name="program-user-name" id="program-user-name"
+                            placeholder="Введите своё имя" data-required-field>
                         <label for="program-user-name">Имя</label>
                     </div>
                     <div class="input-box">
-                        <input type="email" inputmode="email" name="program-e-mail" id="program-e-mail" placeholder="Введите свой почтовый адрес" data-required-field>
+                        <input type="email" inputmode="email" name="program-e-mail" id="program-e-mail"
+                            placeholder="Введите свой почтовый адрес" data-required-field>
                         <label for="program-e-mail">Почта</label>
                     </div>
                     <div class="input-box">
-                        <input type="tel" inputmode="tel" name="program-tel" id="program-telephone" placeholder="+380" data-required-field>
+                        <input type="tel" inputmode="tel" name="program-tel" id="program-telephone" placeholder="+380"
+                            data-required-field>
                         <label for="program-telephone">Телефон</label>
                     </div>
                     <div class="input-box">
@@ -70,7 +74,7 @@
                     <button type="button" class="btn btn_secondary btn_step-second">step 2</button>
                 </div>
             </div>
-            
+
             <div class="input-box">
                 <button id="submit-button" type="button" class="btn btn_secondary btn_lg">ok</button>
             </div>
@@ -185,5 +189,32 @@
                 </div>
             </form>
         </div>
+    </div>
+</div>
+
+<div class="modal modal-template modal-video" id="modal-video">
+    <button type="button" class="close-modal" data-close-modal>
+        <svg class="close-modal__svg">
+            <use href="#icon-close-modal"></use>
+        </svg>
+    </button>
+    <video id="video" class="template-video" >
+        <source src='./assets/img/test-video.mp4' type='video/mp4'>
+        <source src='./assets/img/test-video.ogg' type='video/ogg'>
+        Your browser does not support the video tag.
+    </video>
+    <div class="video-parts">
+        <button data-current-time="20">20 с</button>
+        <button data-current-time="40">40 с</button>
+        <button data-current-time="60">60 с</button>
+        <button data-current-time="80">80 с</button>
+        <button data-current-time="100">100 с</button>
+    </div>
+    <div class="video-controls">
+        <button id="btn-play">play</button>
+        <button id="btn-pause">pause</button>
+        <button id="btn-stop">stop</button>
+        <button id="btn-mute" data-mute="off">mute</button>
+        <input id="volume" type="range" min="0" value="75" max="100">
     </div>
 </div>

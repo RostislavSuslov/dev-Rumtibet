@@ -153,16 +153,4 @@ const checkedValue = () => {
     }
 }
 
-// array.forEach(field => {
-//     field.value !== "" ? console.log("submit form") : null
-// })
-
 submitButtonStepFirst.addEventListener('click', checkedValue);
-
-
-/*
-1. Необмежану кількість кроків
-2. Необмежану кількість обов'язкових полів
-3. Необмежану кількість категорій повідомлень
-3. додати валідацію на номер телефону, емаіл, дату і т.д.
-*/

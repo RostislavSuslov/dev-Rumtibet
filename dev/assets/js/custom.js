@@ -114,7 +114,6 @@ function initBlog() {
 
 	const breakpointChecker = function () {
 		if (breakpoint.matches === true) {
-			console.log(breakpoint.matches);
 			if (swiperBlog !== undefined) swiperBlog.destroy(true, true);
 			return;
 		} else if (breakpoint.matches === false) {
@@ -242,10 +241,3 @@ function initGallery() {
 }
 
 initGallery()
-// 1. custom
-// 2. plagin
-// 3. libary
-
-
-
-//Win+Ctrl+O

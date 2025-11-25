@@ -59,7 +59,7 @@ gulp.task('html', function() {
 // ЗАДАЧА: Копирование изображений
 gulp.task('img', function () {
     return gulp.src([
-        dirs.source + '/assets/img/*.{gif,png,jpg,jpeg,svg}', // какие файлы обрабатывать (путь из константы, маска имени, много расширений)
+        dirs.source + '/assets/img/*.{gif,png,jpg,jpeg,svg,mp4}', // какие файлы обрабатывать (путь из константы, маска имени, много расширений)
     ],
         {since: gulp.lastRun('img')} // оставим в потоке обработки только изменившиеся от последнего запуска задачи (в этой сессии) файлы
     )
@@ -71,7 +71,7 @@ gulp.task('img', function () {
 // ЗАДАЧА: Копирование изображений
 gulp.task('images', function () {
     return gulp.src([
-        dirs.source + '/assets/images/*.{gif,png,jpg,jpeg,svg}', // какие файлы обрабатывать (путь из константы, маска имени, много расширений)
+        dirs.source + '/assets/images/*.{gif,png,jpg,jpeg,svg,mp4}', // какие файлы обрабатывать (путь из константы, маска имени, много расширений)
     ],
         {since: gulp.lastRun('img')} // оставим в потоке обработки только изменившиеся от последнего запуска задачи (в этой сессии) файлы
     )
@@ -83,8 +83,8 @@ gulp.task('images', function () {
 // ЗАДАЧА: Копирование изображений
 gulp.task('imguploads', function () {
     return gulp.src([
-        dirs.source + '/uploads/*.{gif,png,jpg,jpeg,svg}', // какие файлы обрабатывать (путь из константы, маска имени, много расширений)
-        dirs.source + '/uploads/**/*.{gif,png,jpg,jpeg,svg}', // какие файлы обрабатывать (путь из константы, маска имени, много расширений)
+        dirs.source + '/uploads/*.{gif,png,jpg,jpeg,svg,mp4}', // какие файлы обрабатывать (путь из константы, маска имени, много расширений)
+        dirs.source + '/uploads/**/*.{gif,png,jpg,jpeg,svg,mp4}', // какие файлы обрабатывать (путь из константы, маска имени, много расширений)
     ],
         {since: gulp.lastRun('img')} // оставим в потоке обработки только изменившиеся от последнего запуска задачи (в этой сессии) файлы
     )
@@ -242,7 +242,7 @@ gulp.task('serve', gulp.series('build', function() {
         gulp.series('svgstore', 'html', reloader)
     );
     gulp.watch( // следим за изображениями
-        dirs.source + '/assets/img/*.{gif,png,jpg,jpeg,svg}',
+        dirs.source + '/assets/img/*.{gif,png,jpg,jpeg,svg,mp4}',
         gulp.series('img', reloader) // при изменении оптимизируем, копируем и обновляем в браузере
     );
     
@@ -251,14 +251,14 @@ gulp.task('serve', gulp.series('build', function() {
         gulp.series('svgstore', 'html', reloader)
     );
     gulp.watch( // следим за изображениями
-        dirs.source + '/assets/images/*.{gif,png,jpg,jpeg,svg}',
+        dirs.source + '/assets/images/*.{gif,png,jpg,jpeg,svg,mp4}',
         gulp.series('img', reloader) // при изменении оптимизируем, копируем и обновляем в браузере
     );
     
     gulp.watch( // следим за изображениями
         [
-            dirs.source + '/uploads/**/*.{gif,png,jpg,jpeg,svg}',
-            dirs.source + '/uploads/*.{gif,png,jpg,jpeg,svg}',
+            dirs.source + '/uploads/**/*.{gif,png,jpg,jpeg,svg,mp4}',
+            dirs.source + '/uploads/*.{gif,png,jpg,jpeg,svg,mp4}',
         ],
         gulp.series('imguploads', reloader) // при изменении оптимизируем, копируем и обновляем в браузере
     );

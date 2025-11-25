@@ -205,3 +205,25 @@ input:-webkit-autofill:active {
     font-family: "Nunito Sans", sans-serif;
     background-color: #1A3E3E;
 }
+
+.modal-video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.template-video {
+    max-width: 1024px;
+    width: 100%;
+    height: auto;
+}
+
+.video-parts {
+    display: flex;
+    width: 100%;
+}
+
+[data-current-time] {
+    width: 100%;
+}
